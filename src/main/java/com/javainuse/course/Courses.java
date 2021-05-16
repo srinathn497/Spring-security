@@ -7,7 +7,7 @@ import javax.persistence.Id;
 public class Courses {
 
 	@Id
-	public int courseid;
+	public Long courseid;
 	public String coursename;
 	public String coursedescription;
 	
@@ -39,12 +39,12 @@ public class Courses {
 	}
 
 
-	public int getCourseid() {
+	public long getCourseid() {
 		return courseid;
 	}
 
 
-	public void setCourseid(int courseid) {
+	public void setCourseid(long courseid) {
 		this.courseid = courseid;
 	}
 

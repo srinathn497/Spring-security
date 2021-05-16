@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,6 +22,9 @@ public class TopicsController {
 	@Autowired
 	private BusinessService bs;
 	
+	@Autowired
+	private Environment env;
+	
 	@RequestMapping("/")
 	public String home()
 	{
@@ -35,6 +39,14 @@ public class TopicsController {
 			 //new Topics() 
 	}
 	
+
+	@RequestMapping("/env")
+	public String getEnv()
+	{
+	 	 return env.toString();
+			 
+			 //new Topics() 
+	}
 		
 	@RequestMapping("/Topics/{id}")
 	public Optional<Topics> getAllTopicsById(@PathVariable int id)

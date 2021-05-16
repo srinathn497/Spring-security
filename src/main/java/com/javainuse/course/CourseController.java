@@ -38,7 +38,6 @@ public class CourseController {
 	@RequestMapping("/Courses/{id}")
 	public Optional<Courses> getAllCourseById(@PathVariable int id)
 	{
-	//return("<h1>Welcome</h1>");
 	return bs.getCoursesByID(id)	;
 	}
 	

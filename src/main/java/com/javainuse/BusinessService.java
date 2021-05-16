@@ -61,8 +61,7 @@ public class BusinessService {
 						
  	 }
 	public void addTopics(Topics topics2)
-	{ // TODO Auto-generated method stub
-		//topics.add(topics2);
+	{ 
 		crdrepo.save(topics2);
 		 
 	}
